@@ -35,14 +35,14 @@
 
 ## Примеры использования API
 
-Сортировка: 
+####Сортировка: 
 GET /api/v1/Project/GetAllSortedProjects?startDateRange=2024-01-01&priority=1&sortBy=ProjectName
 
 startDateRange=2024-01-01 указывает дату начала проекта.
 priority=1 указывает приоритет проекта.
 sortBy=ProjectName указывает поле, по которому нужно отсортировать проекты (например, по имени проекта).
 
-Добавление:
+####Добавление:
 POST /api/v1/Project
 Content-Type: application/json
 
@@ -54,4 +54,15 @@ Content-Type: application/json
   "ProjectEnd": "2024-02-01",
   "Priority": 1,
   "ProjectManagerId": 321Name
+}
+
+####Редактирование:
+PUT /api/v1/Employee/123
+Content-Type: application/json
+
+{
+  "Name": "Новое имя",
+  "Surname": "Новая фамилия",
+  "Patronymic": "Новое отчество",
+  "Email": "новый_email@example.com"
 }
